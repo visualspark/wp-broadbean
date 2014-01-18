@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WP-Broadbean Documentation</title>
+
+    <style type="text/css">
+        body{
+            font-family: arial, sans-serif;
+        }
+        table{
+            width: 100%
+        }
+        td, th{
+            border-bottom: 1px solid #efefef;
+            padding: 4px;
+            text-align: left;
+        }
+        thead{
+            background-color: #efefef;
+        }
+        
+        section{
+            padding-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>WP-Broadbean Service Documentation</h1>
+</header>
+<section>
+    <h2>Post</h2>
+    <p>URL: http://YOURDOMAIN.com/wp-content/plugins/wp-broadbean/API/</p>
+
+    <h2>Add/Update</h2>
+    <script src="https://gist.github.com/visualspark/bb14cc4b6c3bb76be514.js"></script>
+    <table>
+        <thead>
+            <tr>
+                <th>Object</th>
+                <th>Example</th>
+                <th>Notes</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>command</td><td>Add</td><td>one of either 'Add' or 'Update'</td></tr>
+            <tr><td>user</td><td>bobsmith</td><td>Provided by me</td></tr>
+            <tr><td>key</td><td>p455w0rd</td><td>Provided by me</td></tr>
+            <tr><td>msgid</td><td>1101010281938</td><td>Unique identifier for message. Provided by Broadbean</td></tr>
+            <tr><td>job.id</td><td>bob.12345.123@smith.aplitrak.com</td><td>Aplitrak support is mandatory for job board integrations.</td></tr>
+            <tr><td>job.apply</td><td>http://url.com/ad.asp?adid=12345123</td><td>Apply-on-line support is advised for job board integrations.</td></tr>
+            <tr><td>job.reference</td><td>abc123</td><td>Freetext, the reference number assigned to the advert by the recruiter</td></tr>
+            <tr><td>job.date.create</td><td>date object</td><td>Date and time the job was created</td></tr>
+            <tr><td>job.date.expire</td><td>date object</td><td>Expiry date of job</td></tr>
+            <tr><td>job.contact.name</td><td>Bob Smith</td><td>Free Text, recruiter name as stored on AdCourier</td></tr>
+            <tr><td>job.contact.email</td><td>bob@smith.com</td><td>Freetext, recruiter email address as stored on AdCourier</td></tr>
+            <tr><td>job.contact.phone</td><td>020 7987 6900</td><td>Freetext, recruiter phone number as stored on AdCourier</td></tr>
+            <tr><td>job.info.title</td><td>Test Engineer</td><td>Freetext, the job title of the advert</td></tr>
+            <tr><td>job.info.type</td><td>Contract</td><td>one of: Contract, Permanent, Temporary</td></tr>
+            <tr><td>job.info.duration</td><td>6 months</td><td>Freetext, duration of the position (Contract roles)</td></tr>
+            <tr><td>job.info.start</td><td>ASAP</td><td>Freetext, start date of the position</td></tr>
+            <tr><td>job.info.skills</td><td>vb, c++, perl, java</td><td>Freetext, specific skills/keywords relevant to the position</td></tr>
+            <tr><td>job.info.tags</td><td>developer, all-rounder, lead-role</td><td>Freetext, comma delimited list of tag names.</td></tr>
+            <tr><td>job.info.extended</td><td></td><td>Freetext, 6000 char limit, detailed job description</td></tr>
+            <tr><td>job.info.location</td><td>London</td><td>Freetext, from list provided</td></tr>
+            <tr><td>job.info.industry</td><td>Marketing</td><td>Freetext, from list provided</td></tr>
+
+            <tr><td>job.salary.currency</td><td>gbp</td><td>one of: gbp, usd, eur</td></tr>
+            <tr><td>job.salary.from</td><td>25000</td><td>A number (float) for the lower salary</td></tr>
+            <tr><td>job.salary.to</td><td>30000</td><td>A number (float) for the upper salary</td></tr>
+            <tr><td>job.salary.per</td><td>annum</td><td>Salary term, one of: annum, month, week, day, hour</td></tr>
+            <tr><td>job.salary.benefits</td><td>+ Bonus and Pension</td><td>Freetext, additional salary information</td></tr>
+            <tr><td>job.salary.extended</td><td>£25000 - £30000 per annum + Bonus and Pension</td><td>Freetext salary information for display purposes (build from other salary objects)</td></tr>
+
+            <tr><td>job.summary.point</td><td>text version of a summary point</td><td>Text entry sent as object array. Maximum of 5 points to a summary array.</td></tr>
+        </tbody>
+    </table>
+    <h2>Delete</h2>
+    <script src="https://gist.github.com/visualspark/f7d5fe4300b5fc68ce82.js"></script>
+    <table>
+        <thead>
+        <tr>
+            <th>Object</th>
+            <th>Example</th>
+            <th>Notes</th></tr>
+        </thead>
+        <tbody>
+        <tr><td>command</td><td>delete</td><td>Delete existing job</td></tr>
+        <tr><td>user</td><td>bobsmith</td><td>Provided by me</td></tr>
+        <tr><td>key</td><td>p455w0rd</td><td>Provided by me</td></tr>
+        <tr><td>msgid</td><td>1101010281938</td><td>Unique identifier for message. Provided by Broadbean</td></tr>
+        <tr><td>id</td><td>bob.12345.123@smith.aplitrak.com</td><td>Aplitrak support is mandatory for job board integrations.</td></tr>
+        </tbody>
+    </table>
+
+</section>
+
+<section>
+    <h2>Response</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>Object</th>
+            <th>Example</th>
+            <th>Notes</th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>success</td>
+                <td>true</td>
+                <td>Result of transaction</td>
+            </tr>
+            <tr>
+                <td>id</td>
+                <td>bob.12345.123@smith.aplitrak.com</td>
+                <td>string: job ID provided by Braodbean</td>
+            </tr>
+            <tr>
+                <td>msgid</td>
+                <td>11029381928</td>
+                <td>int: original post message id. This ID is created by broadbean in the original post</td>
+            </tr>
+            <tr>
+                <td>url</td>
+                <td>http://www.url.com/ad.asp?adid=12345123</td>
+                <td>string: url of the job</td>
+            </tr>
+            <tr>
+                <td>msg</td>
+                <td>Incorrect email format</td>
+                <td>string: message on process error</td>
+            </tr>
+        </tbody>
+    </table>
+    <h3>Success example</h3>
+    <script src="https://gist.github.com/visualspark/e0f149efd59dff3d9b03.js"></script>
+
+    <h3>Fail example</h3>
+    <script src="https://gist.github.com/visualspark/ba4c1790a829accd90af.js"></script>
+
+</section>
+</body>
+</html>
