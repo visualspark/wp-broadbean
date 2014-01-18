@@ -21,9 +21,9 @@ Integration with Broadbean Job-adder API. A service is needs to be created from 
 
 ##Frequently Asked Questions
 
+*Can I save jobs to different content editors?*
 
-Can I save jobs to different content editors?
-• Unfortunately not. Only one set of user credentials can be provided to Broadbean to include with the post to the plugin.
+Unfortunately not. Only one set of user credentials can be provided to Broadbean to include with the post to the plugin.
 
 ##Future Plans
 • Step by step documentation
