@@ -4,13 +4,12 @@
 Wordpress plugin for Broadbean integration
 
 ##Description
----
+
 
 Integration with Broadbean Job-adder API. A service is needs to be created from Broadbean.
 
-
 ##Installation
----
+
 
 1. Install and unzip plugin
 2. Activate the plugin through the 'Plugins' menu in WordPress
@@ -21,15 +20,13 @@ Integration with Broadbean Job-adder API. A service is needs to be created from 
 
 
 ##Frequently Asked Questions
----
 
-= Can I save jobs to different content editors =
-Unfortunately not. Only one set of user credentials can be provided to Broadbean to include with the post to the plugin.
+
+Can I save jobs to different content editors?
+• Unfortunately not. Only one set of user credentials can be provided to Broadbean to include with the post to the plugin.
 
 ##Future Plans
----
-
-= Step by step documentation
+• Step by step documentation
 
 ##Anything else
 Please send through any thoughts or update suggestions to the plugin.
